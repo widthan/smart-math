@@ -1,6 +1,6 @@
 
 
-import Container from "@/components/layout/Container/container";
+import Container from "@/components/layout/Container/Container";
 
 export default function HomePage() {
   return (
