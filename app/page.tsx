@@ -1,8 +1,6 @@
 
-import Container from "@/components/layout/Container";
-import Hero from "@/components/landing/Hero";
-
 import Header from "@/components/layout/Header";
+import Hero from "@/components/landing/Hero";
 
 export default function HomePage() {
   return (
@@ -10,7 +8,7 @@ export default function HomePage() {
       <Header />
 
       <main>
-        Hero
+        <Hero />
       </main>
     </>
   );
