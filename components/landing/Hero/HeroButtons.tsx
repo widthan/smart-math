@@ -3,9 +3,12 @@ import Button from "@/components/ui/Button";
 export default function HeroButtons() {
   return (
     <div className="flex flex-wrap gap-4">
-      <Button>
-        Записаться
-      </Button>
+<a
+  href="#contact"
+  className="rounded-xl bg-pink-600 px-8 py-4 font-semibold text-white transition hover:bg-pink-700"
+>
+  Записаться
+</a>
 
       <Button variant="secondary">
         Подробнее
