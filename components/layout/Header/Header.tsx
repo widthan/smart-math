@@ -7,10 +7,10 @@ export default function Header() {
         </h1>
 
         <nav className="flex gap-8">
-          <a href="#">Главная</a>
-          <a href="#">О тренинге</a>
-          <a href="#">Отзывы</a>
-          <a href="#">Контакты</a>
+         <a href="#about">О курсе</a>
+<a href="#program">Программа</a>
+<a href="#reviews">Отзывы</a>
+<a href="#contact">Записаться</a>
         </nav>
       </div>
     </header>

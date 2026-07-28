@@ -3,7 +3,7 @@ import ReviewCard from "./ReviewCard";
 
 export default function Reviews() {
   return (
-    <section className="bg-pink-50 py-24">
+    <section id="reviews" className="bg-pink-50 py-24">
       <Container>
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="font-semibold uppercase tracking-widest text-pink-600">

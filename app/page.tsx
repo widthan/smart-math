@@ -6,6 +6,7 @@ import Results from "@/components/sections/Results";
 import Program from "@/components/sections/Program";
 import Reviews from "@/components/sections/Reviews";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,8 @@ export default function HomePage() {
         <Reviews />
         <Contact />
       </main>
+      
+      <Footer />
     </>
   );
 }

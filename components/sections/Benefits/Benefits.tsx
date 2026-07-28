@@ -3,7 +3,7 @@ import BenefitCard from "./BenefitCard";
 
 export default function Benefits() {
   return (
-    <section className="bg-zinc-50 py-24">
+    <section id="benefits" className="bg-zinc-50 py-24">
       <Container>
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="text-pink-600 font-semibold uppercase tracking-widest">

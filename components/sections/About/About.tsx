@@ -5,7 +5,7 @@ import AboutCard from "./AboutCard";
 
 export default function About() {
   return (
-    <section className="bg-zinc-50 py-24">
+    <section id="about" className="bg-zinc-50 py-24">
       <Container>
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="relative mx-auto h-[600px] w-[450px] overflow-hidden rounded-3xl shadow-xl">

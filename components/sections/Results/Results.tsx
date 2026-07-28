@@ -3,7 +3,7 @@ import ResultCard from "./ResultCard";
 
 export default function Results() {
   return (
-    <section className="py-24">
+    <section id="results" className="py-24">
       <Container>
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="font-semibold uppercase tracking-widest text-pink-600">

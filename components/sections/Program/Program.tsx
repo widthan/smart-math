@@ -3,7 +3,7 @@ import ProgramCard from "./ProgramCard";
 
 export default function Program() {
   return (
-    <section className="bg-white py-24">
+    <section id="program" className="bg-white py-24">
       <Container>
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="font-semibold uppercase tracking-widest text-pink-600">
