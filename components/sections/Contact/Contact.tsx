@@ -8,16 +8,12 @@ export default function Contact() {
 const [phone, setPhone] = useState("");
 const [email, setEmail] = useState("");
 const [message, setMessage] = useState("");
+const [isSuccess, setIsSuccess] = useState(false);
 const handleSubmit = async (
   e: React.FormEvent<HTMLFormElement>
 ) => {
   e.preventDefault();
-console.log({
-  name,
-  phone,
-  email,
-  message,
-});
+
   const response = await fetch("/api/register", {
     method: "POST",
     headers: {
@@ -31,17 +27,66 @@ console.log({
     }),
   });
 
-  if (response.ok) {
-    alert("Спасибо! Заявка отправлена.");
+if (response.ok) {
+  setIsSuccess(true);
 
-    setName("");
-    setPhone("");
-    setEmail("");
-    setMessage("");
-  } else {
-    alert("Ошибка отправки.");
-  }
+  setName("");
+  setPhone("");
+  setEmail("");
+  setMessage("");
+
+  window.history.replaceState({}, "", "/");
+} else {
+  alert("Ошибка отправки.");
+}
 };
+if (isSuccess) {
+  return (
+    <section
+      id="contact"
+      className="bg-pink-600 py-24 text-white"
+    >
+      <Container>
+        <div
+  className="
+    mx-auto
+    max-w-2xl
+    rounded-3xl
+    bg-white
+    p-12
+    text-center
+    text-zinc-900
+    shadow-2xl
+    animate-[fadeIn_.6s_ease-out]
+  "
+>
+
+          <div
+  className="
+    mb-6
+    text-7xl
+    animate-[pop_.5s_ease-out]
+  "
+>
+  ✅
+</div>
+
+          <h2 className="text-4xl font-bold">
+            Спасибо!
+          </h2>
+
+          <p className="mt-6 text-lg leading-8 text-zinc-600">
+            Мы получили вашу заявку.
+            <br />
+            Анастасия свяжется с вами
+            в ближайшее время.
+          </p>
+
+        </div>
+      </Container>
+    </section>
+  );
+}
   return (
     <section
       id="contact"

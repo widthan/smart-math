@@ -18,10 +18,11 @@ export default function Button({
   };
 
   return (
-    <button
-      onClick={onClick}
-      className={styles[variant]}
-    >
+  <button
+  type="button"
+  onClick={onClick}
+  className={`${styles[variant]} transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
+>
       {children}
     </button>
   );

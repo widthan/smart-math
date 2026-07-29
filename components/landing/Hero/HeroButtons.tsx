@@ -10,9 +10,11 @@ export default function HeroButtons() {
   Записаться
 </a>
 
-      <Button variant="secondary">
-        Подробнее
-      </Button>
+      <a href="#about">
+  <Button variant="secondary">
+    Подробнее
+  </Button>
+</a>
     </div>
   );
 }
