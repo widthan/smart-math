@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-
+import { prisma } from "@/lib/prisma";
 export async function POST(request: Request) {
   try {
     const { name, phone, email, message } = await request.json();
@@ -11,7 +11,14 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-
+await prisma.application.create({
+  data: {
+    name,
+    phone,
+    email,
+    message,
+  },
+});
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
