@@ -11,12 +11,35 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+model Admin {
+  id           Int      @id @default(autoincrement())
+  login        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
 
 model Application {
-  id        Int      @id @default(autoincrement())
-  name      String
-  phone     String
-  email     String
-  message   String?
-  createdAt DateTime @default(now())
+  id          Int      @id @default(autoincrement())
+
+  fullName    String
+  phone       String
+  email       String
+
+  city        String?
+
+  workplace   String?
+
+  experience  String
+
+  students    String?
+
+  telegram    Boolean?
+
+  reason      String?
+
+  source      String   @default("Сайт")
+
+  status      String   @default("Новая")
+
+  createdAt   DateTime @default(now())
 }

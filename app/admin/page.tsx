@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-
+import LogoutButton from "./LogoutButton";
 
 export default async function AdminPage() {
   const applications = await prisma.application.findMany({
@@ -14,9 +14,15 @@ type Application = (typeof applications)[number];
   <main className="min-h-screen bg-zinc-100 p-10">
     <div className="mx-auto max-w-7xl">
 
-      <h1 className="mb-8 text-4xl font-bold text-zinc-900">
-        Заявки Smart Math
-      </h1>
+      <div className="mb-8 flex items-center justify-between">
+
+  <h1 className="text-4xl font-bold text-zinc-900">
+    Заявки Smart Math
+  </h1>
+
+  <LogoutButton />
+
+</div>
 
       <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
 
@@ -39,7 +45,7 @@ type Application = (typeof applications)[number];
                 className="border-b border-zinc-200 hover:bg-pink-50"
               >
                 <td className="p-5 font-medium text-zinc-900">
-                  {app.name}
+                  {app.fullName}
                 </td>
 
                 <td className="p-5">
@@ -61,7 +67,7 @@ type Application = (typeof applications)[number];
                 </td>
 
                 <td className="p-5 text-zinc-700">
-                  {app.message || "—"}
+                  {app.reason || "—"}
                 </td>
 
                 <td className="p-5 text-zinc-500">
