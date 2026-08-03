@@ -1,8 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,6 +6,7 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model Admin {
   id           Int      @id @default(autoincrement())
   login        String   @unique
@@ -19,27 +15,40 @@ model Admin {
 }
 
 model Application {
-  id          Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  fullName    String
-  phone       String
-  email       String
+  fullName String
+  phone    String
+  email    String
 
-  city        String?
+  city       String?
+  workplace  String?
+  experience String
 
-  workplace   String?
+  students String?
 
-  experience  String
+  telegram Boolean?
 
-  students    String?
+  reason String?
 
-  telegram    Boolean?
+  source String @default("Сайт")
+  status String @default("Новая")
 
-  reason      String?
+  createdAt DateTime @default(now())
 
-  source      String   @default("Сайт")
+  notes String?
 
-  status      String   @default("Новая")
+  logs ApplicationLog[]
+}
 
-  createdAt   DateTime @default(now())
+model ApplicationLog {
+  id Int @id @default(autoincrement())
+
+  applicationId Int
+
+  action String
+
+  createdAt DateTime @default(now())
+
+  application Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
 }

@@ -7,6 +7,12 @@ export default function Contact() {
   const [name, setName] = useState("");
 const [phone, setPhone] = useState("");
 const [email, setEmail] = useState("");
+const [city, setCity] = useState("");
+const [workplace, setWorkplace] = useState("");
+const [experience, setExperience] = useState("");
+const [telegram, setTelegram] = useState(true);
+const [reason, setReason] = useState("");
+const [source, setSource] = useState("");
 const [message, setMessage] = useState("");
 const [isSuccess, setIsSuccess] = useState(false);
 const handleSubmit = async (
@@ -20,11 +26,16 @@ const handleSubmit = async (
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      name,
-      phone,
-      email,
-      message,
-    }),
+  fullName: name,
+  phone,
+  email,
+  city,
+  workplace,
+  experience,
+  telegram,
+  reason,
+  source,
+}),
   });
 
 if (response.ok) {
@@ -33,6 +44,12 @@ if (response.ok) {
   setName("");
   setPhone("");
   setEmail("");
+  setCity("");
+setWorkplace("");
+setExperience("");
+setTelegram(true);
+setReason("");
+setSource("");
   setMessage("");
 
   window.history.replaceState({}, "", "/");
@@ -132,8 +149,52 @@ if (isSuccess) {
   onChange={(e) => setEmail(e.target.value)}
   className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
 />
+<input
+  type="text"
+  placeholder="Город"
+  value={city}
+  onChange={(e) => setCity(e.target.value)}
+  className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
+/>
+<input
+  type="text"
+  placeholder="Школа или место работы"
+  value={workplace}
+  onChange={(e) => setWorkplace(e.target.value)}
+  className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
+/>
+<select
+  value={experience}
+  onChange={(e) => setExperience(e.target.value)}
+  className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
+>
+  <option value="">Стаж работы</option>
+  <option>До 1 года</option>
+  <option>1–3 года</option>
+  <option>3–7 лет</option>
+  <option>Более 7 лет</option>
+</select>
 
+<select
+  value={telegram ? "yes" : "no"}
+  onChange={(e) => setTelegram(e.target.value === "yes")}
+  className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
+>
+  <option value="yes">
+    Telegram на этом номере — Да
+  </option>
 
+  <option value="no">
+    Telegram на этом номере — Нет
+  </option>
+</select>
+<textarea
+  rows={5}
+  placeholder="Почему хотите попасть на интенсив?"
+  value={reason}
+  onChange={(e) => setReason(e.target.value)}
+  className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
+/>
            <textarea
   rows={5}
   placeholder="Сообщение"
@@ -141,6 +202,18 @@ if (isSuccess) {
   onChange={(e) => setMessage(e.target.value)}
   className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
 />
+
+<select
+  value={source}
+  onChange={(e) => setSource(e.target.value)}
+  className="w-full rounded-xl border border-zinc-300 p-4 outline-none focus:border-pink-500"
+>
+  <option value="">Откуда вы узнали о нас?</option>
+  <option>Instagram</option>
+  <option>Google</option>
+  <option>Рекомендация</option>
+  <option>Другое</option>
+</select>
 
             <button
   type="submit"
