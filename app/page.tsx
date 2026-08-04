@@ -7,6 +7,8 @@ import Program from "@/components/sections/Program";
 import Reviews from "@/components/sections/Reviews";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
+import WhyUs from "@/components/sections/WhyUs";
+import Journey from "@/components/sections/Journey";
 
 export default function HomePage() {
   return (
@@ -15,6 +17,8 @@ export default function HomePage() {
 
       <main>
         <Hero />
+        <WhyUs />
+        <Journey />
         <About />
         <Benefits />
         <Results />

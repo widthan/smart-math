@@ -1,63 +1,72 @@
+import Link from "next/link";
+import Container from "../Container";
+
 export default function Header() {
   return (
-<header
-  className="
-    sticky
-    top-0
-    z-50
-    border-b
-    border-zinc-100
-    bg-white
-    shadow-sm
-  "
->
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
-  <a
-  href="#hero"
-  className="text-2xl font-bold text-zinc-900 transition hover:text-pink-600"
->
-  Smart Math
-</a>
+    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur-xl">
 
-      <nav className="flex gap-8 text-zinc-800">
+      <Container>
 
-  <a
-    href="#hero"
-    className="font-medium transition hover:text-pink-600"
-  >
-    Главная
-  </a>
+        <div className="flex h-20 items-center justify-between">
 
-  <a
-    href="#about"
-    className="font-medium transition hover:text-pink-600"
-  >
-    Об авторе
-  </a>
+          <Link
+            href="/"
+            className="flex items-center gap-2"
+          >
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0F3B6D] text-lg font-bold text-white shadow-md">
+              S
+            </div>
 
-  <a
-    href="#program"
-    className="font-medium transition hover:text-pink-600"
-  >
-    Программа
-  </a>
+            <div className="leading-none">
 
-  <a
-    href="#reviews"
-    className="font-medium transition hover:text-pink-600"
-  >
-    Отзывы
-  </a>
+              <div className="text-xl font-bold tracking-tight text-slate-900">
+                Smart Math
+              </div>
 
-  <a
-    href="#contact"
-    className="font-medium transition hover:text-pink-600"
-  >
-    Контакты
-  </a>
+              <div className="text-xs tracking-[0.25em] text-slate-500 uppercase">
+                Education Studio
+              </div>
 
-</nav>
-      </div>
+            </div>
+
+          </Link>
+
+          <nav className="hidden items-center gap-10 lg:flex">
+
+            <a
+              href="#about"
+              className="font-medium text-slate-600 transition duration-300 hover:text-[#0F3B6D]"
+            >
+              О проекте
+            </a>
+
+            <a
+              href="#program"
+              className="font-medium text-slate-600 transition duration-300 hover:text-[#0F3B6D]"
+            >
+              Программа
+            </a>
+
+            <a
+              href="#reviews"
+              className="font-medium text-slate-600 transition duration-300 hover:text-[#0F3B6D]"
+            >
+              Отзывы
+            </a>
+
+            <a
+              href="#contact"
+              className="rounded-2xl bg-[#0F3B6D] px-7 py-3 font-semibold text-white transition duration-300 hover:bg-[#18508F]"
+            >
+              Записаться
+            </a>
+
+          </nav>
+
+        </div>
+
+      </Container>
+
     </header>
   );
 }

@@ -1,53 +1,59 @@
-import Image from "next/image";
-
 import Container from "@/components/layout/Container";
-import AboutCard from "./AboutCard";
+import TeacherCard from "./TeacherCard";
 
 export default function About() {
   return (
-    <section id="about" className="bg-zinc-50 py-24">
+    <section
+      id="about"
+      className="bg-[#F7F9FC] py-28"
+    >
       <Container>
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          <div className="relative mx-auto h-[600px] w-[450px] overflow-hidden rounded-3xl shadow-xl">
-            <Image
-              src="/images/anastasia.webp"
-              alt="Анастасия"
-              fill
-              sizes="450px"
-              className="object-cover"
-            />
-          </div>
 
-          <div>
-            <span className="font-semibold uppercase tracking-widest text-pink-600">
-              Автор курса
-            </span>
+        <div className="mx-auto mb-20 max-w-3xl text-center">
 
-            <h2 className="mt-4 text-4xl font-bold">
-              Анастасия Гладких
-            </h2>
+          <span className="text-sm font-semibold uppercase tracking-[0.30em] text-[#0F3B6D]">
+            Команда Smart Math
+          </span>
 
-            <p className="mt-6 text-lg leading-8 text-zinc-600">
-              Более 14 лет помогает детям начальной школы учиться
-              легко, спокойно и с интересом.
-            </p>
+          <h2 className="mt-5 text-5xl font-bold text-slate-900">
+            Интенсив проводят
+            <br />
+            практикующие педагоги
+          </h2>
 
-            <p className="mt-6 leading-8 text-zinc-600">
-              Учитель начальных классов, репетитор, методист,
-              педагог дополнительного образования.
-              За годы практики выработала систему,
-              которая помогает детям становиться самостоятельными,
-              а родителям перестать ежедневно бороться
-              с домашними заданиями.
-            </p>
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-600">
+            Мы ежедневно работаем с детьми младшего школьного возраста
+            и знаем, как сделать обучение понятным,
+            интересным и результативным.
+          </p>
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-3">
-              <AboutCard value="14+" label="лет опыта" />
-              <AboutCard value="1000+" label="учеников" />
-              <AboutCard value="100%" label="практика" />
-            </div>
-          </div>
         </div>
+
+        <div className="grid gap-10 lg:grid-cols-3">
+
+          <TeacherCard
+            image="/images/anastasia.webp"
+            name="Анастасия Гладких"
+            role="Руководитель проекта"
+            description="Автор методики Smart Math. Более 14 лет помогает детям развивать память, внимание и логическое мышление, превращая обучение в понятный и увлекательный процесс."
+          />
+
+          <TeacherCard
+            image="/images/teacher2.webp"
+            name="Ирина"
+            role="Методист программы"
+            description="Специалист по начальному образованию. Помогает детям выстроить прочную базу знаний, развивает самостоятельность и уверенность в собственных силах."
+          />
+
+          <TeacherCard
+            image="/images/teacher3.webp"
+            name="Алия"
+            role="Педагог интенсива"
+            description="Проводит практические занятия по развитию памяти, внимания и мышления, используя современные игровые и авторские методики."
+          />
+
+        </div>
+
       </Container>
     </section>
   );
