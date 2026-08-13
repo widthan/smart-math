@@ -11,10 +11,10 @@ export default function Button({
 }: ButtonProps) {
   const styles = {
     primary:
-      "rounded-xl bg-violet-600 px-8 py-4 font-semibold text-white transition hover:bg-violet-700",
+      "rounded-xl bg-violet-600 px-8 py-4 font-semibold text-white transition hover:bg-[#18508F]",
 
     secondary:
-      "rounded-xl border border-violet-600 px-8 py-4 font-semibold text-violet-600 transition hover:bg-violet-50",
+      "rounded-xl border border-violet-600 px-8 py-4 font-semibold text-violet-600 transition hover:bg-[#18508F]",
   };
 
   return (

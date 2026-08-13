@@ -90,14 +90,16 @@ export default function Hero() {
 
             <div className="relative overflow-hidden rounded-[40px] shadow-2xl">
 
-              <Image
-                src="/images/anastasia.webp"
-                alt="Анастасия Гладких"
-                width={700}
-                height={900}
-                className="w-full object-cover"
-                priority
-              />
+ <Image
+  src="/images/anastasia.webp"
+  alt="Анастасия Гладких"
+  width={620}
+  height={840}
+  priority
+  loading="eager"
+  sizes="(max-width: 1024px) 90vw, 520px"
+  className="h-auto w-full max-w-[520px] object-cover"
+/>
 
             </div>
 

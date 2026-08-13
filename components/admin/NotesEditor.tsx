@@ -51,7 +51,7 @@ export default function NotesEditor({
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="min-h-[220px] w-full rounded-xl border border-zinc-300 p-5 outline-none transition focus:border-pink-500"
+        className="min-h-[220px] w-full rounded-xl border border-zinc-300 p-5 outline-none transition border-[#BFD5E8]"
       />
 
       <div className="mt-4 flex items-center gap-4">
@@ -59,7 +59,7 @@ export default function NotesEditor({
         <button
           onClick={save}
           disabled={saving}
-          className="rounded-xl bg-pink-600 px-6 py-3 font-semibold text-white transition hover:bg-pink-700 disabled:opacity-60"
+          className="rounded-xl bg-[#EAF2FA] px-6 py-3 font-semibold text-white transition hover:bg-pink-700 disabled:opacity-60"
         >
           {saving ? "Сохранение..." : "Сохранить"}
         </button>

@@ -34,7 +34,7 @@ export default function RootLayout({
         <Background />
 
         {/* Градиент */}
-        <div className="fixed inset-0 -z-20 bg-gradient-to-br from-white via-pink-50 to-sky-50" />
+        <div className="fixed inset-0 -z-20 bg-gradient-to-br from-white bg-[#EAF2FA] to-sky-50" />
 
         {/* Blur #1 */}
         <div className="fixed left-[-180px] top-[-180px] -z-10 h-[520px] w-[520px] rounded-full bg-fuchsia-400/25 blur-[170px]" />
@@ -43,7 +43,7 @@ export default function RootLayout({
         <div className="fixed right-[-180px] top-[120px] -z-10 h-[520px] w-[520px] rounded-full bg-sky-400/20 blur-[170px]" />
 
         {/* Blur #3 */}
-        <div className="fixed bottom-[-220px] left-1/3 -z-10 h-[700px] w-[700px] rounded-full bg-pink-300/20 blur-[220px]" />
+        <div className="fixed bottom-[-220px] left-1/3 -z-10 h-[700px] w-[700px] rounded-full bg-[#EAF2FA] blur-[220px]" />
 
         {/* Шум */}
         <div

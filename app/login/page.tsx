@@ -36,7 +36,7 @@ export default function LoginPage() {
 
       <form
         onSubmit={handleLogin}
-        className="w-full max-w-md rounded-3xl bg-white p-10 shadow-xl"
+        className="w-full max-w-md rounded-3xl bg-[#0F3B6D] p-10 shadow-xl"
       >
 
         <h1 className="mb-8 text-center text-3xl font-bold">
@@ -65,7 +65,7 @@ export default function LoginPage() {
         )}
 
         <button
-          className="w-full rounded-xl bg-pink-600 py-4 text-white"
+          className="w-full rounded-xl bg-[#B0E0E6]  py-4 text-FFFF"
         >
           Войти
         </button>

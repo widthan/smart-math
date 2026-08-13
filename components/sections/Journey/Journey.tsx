@@ -30,7 +30,7 @@ export default function Journey() {
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
 
-          <span className="font-semibold uppercase tracking-[0.25em] text-pink-600">
+          <span className="font-semibold uppercase tracking-[0.25em] text-[#0F3B6D]">
             Как проходит обучение
           </span>
 
@@ -43,7 +43,7 @@ export default function Journey() {
 
         <div className="relative mx-auto max-w-4xl">
 
-          <div className="absolute left-8 top-0 h-full w-px bg-pink-200" />
+          <div className="absolute left-8 top-0 h-full w-px bg-[#EAF2FA]" />
 
           <div className="space-y-12">
 
@@ -52,7 +52,7 @@ export default function Journey() {
                 key={step.number}
                 className="relative flex gap-8"
               >
-                <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-pink-600 font-bold text-white shadow-lg">
+                <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-[#EAF2FA] font-bold text-white shadow-lg">
                   {step.number}
                 </div>
 

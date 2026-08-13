@@ -18,12 +18,13 @@ export default function TeacherCard({
 
       <div className="relative h-[420px]">
 
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover"
-        />
+       <Image
+  src={image}
+  alt={name}
+  fill
+  sizes="(max-width:768px) 100vw, (max-width:1280px) 50vw, 33vw"
+  className="object-cover"
+/>
 
       </div>
 

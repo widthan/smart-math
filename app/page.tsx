@@ -1,3 +1,4 @@
+import Pricing from "@/components/sections/Pricing";
 import Header from "@/components/layout/Header";
 import Hero from "@/components/landing/Hero";
 import About from "@/components/sections/About";
@@ -15,17 +16,16 @@ export default function HomePage() {
     <>
       <Header />
 
-      <main>
-        <Hero />
-        <WhyUs />
-        <Journey />
-        <About />
-        <Benefits />
-        <Results />
-        <Program />
-        <Reviews />
-        <Contact />
-      </main>
+  <main>
+  <Hero />
+  <About />
+  <Benefits />
+  <Results />
+  <Program />
+  <Reviews />
+  <Pricing />
+  <Contact />
+</main>
       
       <Footer />
     </>

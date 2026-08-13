@@ -46,6 +46,12 @@ export default function Header() {
             >
               Программа
             </a>
+            <a
+  href="#pricing"
+  className="font-medium text-slate-600 transition hover:text-[#0F3B6D]"
+>
+  Стоимость
+</a>
 
             <a
               href="#reviews"
