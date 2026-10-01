@@ -9,7 +9,7 @@ export default function ReviewCard({
 }: ReviewCardProps) {
   return (
     <div className="rounded-3xl bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
-      <div className="mb-6 text-5xl text-pink-500">
+      <div className="mb-6 text-5xl text-[#0F3B6D]">
         ❝
       </div>
 

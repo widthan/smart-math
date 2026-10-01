@@ -3,7 +3,7 @@ import HeroButtons from "./HeroButtons";
 export default function HeroContent() {
   return (
     <div>
-      <span className="mb-5 inline-block rounded-full bg-violet-100 px-5 py-2 text-sm font-semibold text-violet-700">
+      <span className="mb-5 inline-block rounded-full bg-[#EAF2FA] px-5 py-2 text-sm font-semibold text-[#0F3B6D]">
         Онлайн-курс для родителей
       </span>
 
@@ -11,7 +11,7 @@ export default function HeroContent() {
         Научите ребёнка
         <br />
         учиться
-        <span className="text-violet-600">
+        <span className="text-[#0F3B6D]">
           {" "}
           самостоятельно
         </span>

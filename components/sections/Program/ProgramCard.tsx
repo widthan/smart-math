@@ -10,8 +10,9 @@ export default function ProgramCard({
   description,
 }: ProgramCardProps) {
   return (
-    <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-pink-600 text-xl font-bold text-white">
+    <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm transition hover:
+    -translate-y-1 hover:shadow-xl">
+      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#0F3B6D] text-xl font-bold text-white">
         {number}
       </div>
 

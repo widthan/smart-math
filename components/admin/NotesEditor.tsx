@@ -59,7 +59,7 @@ export default function NotesEditor({
         <button
           onClick={save}
           disabled={saving}
-          className="rounded-xl bg-[#EAF2FA] px-6 py-3 font-semibold text-white transition hover:bg-pink-700 disabled:opacity-60"
+          className="rounded-xl bg-[#EAF2FA] px-6 py-3 font-semibold text-white transition hover:bg-[#18508F] disabled:opacity-60"
         >
           {saving ? "Сохранение..." : "Сохранить"}
         </button>

@@ -9,7 +9,7 @@ export default function ResultCard({
 }: ResultCardProps) {
   return (
     <div className="rounded-3xl bg-white p-8 shadow-sm transition hover:shadow-xl">
-      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-pink-600 text-2xl text-white">
+      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#EAF2FA] text-2xl text-white">
         ✓
       </div>
 

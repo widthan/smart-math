@@ -22,7 +22,7 @@ export default function ThankYouPage() {
 
         <Link
           href="/"
-          className="inline-flex rounded-xl bg-pink-600 px-8 py-4 font-semibold text-white transition hover:bg-pink-700"
+          className="inline-flex rounded-xl bg-[#EAF2FA] px-8 py-4 font-semibold text-white transition hover:bg-[#18508F]"
         >
           Вернуться на главную
         </Link>

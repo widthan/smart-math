@@ -13,7 +13,7 @@ export default function Hero() {
 
           <div>
 
-            <div className="mb-6 inline-flex rounded-full border border-pink-200 bg-pink-50 px-4 py-2 text-sm font-medium text-pink-700">
+            <div className="mb-6 inline-flex rounded-full border border-[#DCE5EF] bg-[#0F3B6D] px-4 py-2 text-sm font-medium text-white">
               Онлайн-интенсив для родителей детей 1–4 классов
             </div>
 
@@ -21,7 +21,7 @@ export default function Hero() {
               Помогаем детям
               <br />
               учиться
-              <span className="text-pink-600">
+              <span className="text-[#0F3B6D]">
                 {" "}спокойно
               </span>
               <br />
@@ -39,14 +39,14 @@ export default function Hero() {
 
               <Link
                 href="#contact"
-                className="rounded-2xl bg-pink-600 px-8 py-4 font-semibold text-white transition hover:bg-pink-700"
+                className="rounded-2xl bg-[#0F3B6D] px-8 py-4 font-semibold text-white transition hover:bg-[#18508F]"
               >
                 Записаться
               </Link>
 
               <Link
                 href="#about"
-                className="rounded-2xl border border-zinc-300 px-8 py-4 font-semibold text-zinc-700 transition hover:border-pink-400"
+                className="rounded-2xl border border-zinc-300 px-8 py-4 font-semibold text-zinc-700 transition border-[#BFD5E8]"
               >
                 Подробнее
               </Link>
@@ -84,7 +84,7 @@ export default function Hero() {
 
           <div className="relative">
 
-            <div className="absolute -left-10 top-12 h-56 w-56 rounded-full bg-pink-200/40 blur-3xl" />
+            <div className="absolute -left-10 top-12 h-56 w-56 rounded-full bg-[#0F3B6D] blur-3xl" />
 
             <div className="absolute -right-10 bottom-0 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
 

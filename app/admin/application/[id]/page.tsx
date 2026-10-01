@@ -33,7 +33,7 @@ export default async function ApplicationPage({
         <div className="mb-6">
           <Link
             href="/admin"
-            className="text-pink-600 hover:underline"
+            className="text-[#0F3B6D] hover:underline"
           >
             ← Назад к заявкам
           </Link>

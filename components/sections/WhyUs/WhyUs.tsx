@@ -26,7 +26,7 @@ export default function WhyUs() {
 
         <div className="mx-auto max-w-3xl text-center">
 
-          <span className="font-semibold uppercase tracking-[0.25em] text-pink-600">
+          <span className="font-semibold uppercase tracking-[0.25em] text-[#0F3B6D]">
             Почему Smart Math
           </span>
 
